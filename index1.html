@@ -43,12 +43,27 @@
 
     // Array.prototype.filter()
     // 1. Отфильтровать президентов которые родились в 1700-х годах.
+	 
+	 /*
+const bornf1700  = presidents.filter(president => {
+	if (president.born >= 1700 && president.born < 1800) {
+		return true;
+	}
+})
+console.table(bornf1700);
+*/
 
+const bornf1700  = presidents.filter(president => president.born >= 1700 && president.born < 1800) 
+
+//console.table(bornf1700);
 
 
     // Array.prototype.map()
     // 2. Создать массив, который содержит только имя и фамилию каждого президента
-
+	 const firstLast = presidents.map(president => {
+		 return `${president.first}. ${president.last}`
+	 })
+	 console.table(firstLast);
 
 
     // Array.prototype.sort()
